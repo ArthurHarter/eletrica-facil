@@ -304,6 +304,46 @@
     .footer-inner { flex-direction: column; }
     nav { display: none; }
   }
+
+  /* === MOBILE: tabelas viram cartões === */
+  @media (max-width: 600px) {
+    .full-table, .full-table thead, .full-table tbody,
+    .full-table th, .full-table td, .full-table tr { display: block; width: 100%; }
+    .full-table thead { display: none; }
+    .full-table tbody tr {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      padding: 4px 0;
+    }
+    .full-table tbody td {
+      padding: 8px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      text-align: right;
+    }
+    .full-table tbody td:last-child { border-bottom: none; }
+    .full-table tbody td::before {
+      content: attr(data-label);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--yellow);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      min-width: 90px;
+      text-align: left;
+    }
+    section { padding: 40px 16px; }
+    h1 { font-size: 30px !important; }
+    h2 { font-size: 22px !important; }
+    .affiliate-banner { flex-direction: column; padding: 24px 20px; }
+  }
 </style>
 </head>
 <body>
@@ -416,20 +456,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Iluminação geral</td><td>até 1.000 W</td><td>4,5 A</td><td class="highlight">10 A</td><td>1,5 mm²</td></tr>
-          <tr><td>Tomadas comuns</td><td>até 1.500 W</td><td>6,8 A</td><td class="highlight">16 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Chuveiro 5.500 W</td><td>5.500 W</td><td>25 A</td><td class="highlight">30 A</td><td>4,0 mm²</td></tr>
-          <tr><td>Chuveiro 7.500 W</td><td>7.500 W</td><td>34 A</td><td class="highlight">40 A</td><td>6,0 mm²</td></tr>
-          <tr><td>Ar-cond. 9.000 BTU</td><td>~900 W</td><td>4,1 A</td><td class="highlight">10 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Ar-cond. 12.000 BTU</td><td>~1.200 W</td><td>5,5 A</td><td class="highlight">16 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Ar-cond. 18.000 BTU</td><td>~1.800 W</td><td>8,2 A</td><td class="highlight">16 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Ar-cond. 24.000 BTU</td><td>~2.400 W</td><td>10,9 A</td><td class="highlight">20 A</td><td>4,0 mm²</td></tr>
-          <tr><td>Forno elétrico</td><td>~2.000 W</td><td>9,1 A</td><td class="highlight">20 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Micro-ondas</td><td>~1.300 W</td><td>5,9 A</td><td class="highlight">16 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Geladeira comum</td><td>~150 W</td><td>0,7 A</td><td class="highlight">10 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Máq. de lavar 10 kg</td><td>~500 W</td><td>2,3 A</td><td class="highlight">16 A</td><td>2,5 mm²</td></tr>
-          <tr><td>Secadora de roupas</td><td>~2.500 W</td><td>11,4 A</td><td class="highlight">20 A</td><td>4,0 mm²</td></tr>
-          <tr><td>Aquecedor elétrico</td><td>~2.000 W</td><td>9,1 A</td><td class="highlight">20 A</td><td>2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Iluminação geral</td><td data-label="Potência">até 1.000 W</td><td data-label="Corrente">4,5 A</td><td class="highlight" data-label="Disjuntor">10 A</td><td data-label="Fio">1,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Tomadas comuns</td><td data-label="Potência">até 1.500 W</td><td data-label="Corrente">6,8 A</td><td class="highlight" data-label="Disjuntor">16 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Chuveiro 5.500 W</td><td data-label="Potência">5.500 W</td><td data-label="Corrente">25 A</td><td class="highlight" data-label="Disjuntor">30 A</td><td data-label="Fio">4,0 mm²</td></tr>
+          <tr><td data-label="Equipamento">Chuveiro 7.500 W</td><td data-label="Potência">7.500 W</td><td data-label="Corrente">34 A</td><td class="highlight" data-label="Disjuntor">40 A</td><td data-label="Fio">6,0 mm²</td></tr>
+          <tr><td data-label="Equipamento">Ar-cond. 9.000 BTU</td><td data-label="Potência">~900 W</td><td data-label="Corrente">4,1 A</td><td class="highlight" data-label="Disjuntor">10 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Ar-cond. 12.000 BTU</td><td data-label="Potência">~1.200 W</td><td data-label="Corrente">5,5 A</td><td class="highlight" data-label="Disjuntor">16 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Ar-cond. 18.000 BTU</td><td data-label="Potência">~1.800 W</td><td data-label="Corrente">8,2 A</td><td class="highlight" data-label="Disjuntor">16 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Ar-cond. 24.000 BTU</td><td data-label="Potência">~2.400 W</td><td data-label="Corrente">10,9 A</td><td class="highlight" data-label="Disjuntor">20 A</td><td data-label="Fio">4,0 mm²</td></tr>
+          <tr><td data-label="Equipamento">Forno elétrico</td><td data-label="Potência">~2.000 W</td><td data-label="Corrente">9,1 A</td><td class="highlight" data-label="Disjuntor">20 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Micro-ondas</td><td data-label="Potência">~1.300 W</td><td data-label="Corrente">5,9 A</td><td class="highlight" data-label="Disjuntor">16 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Geladeira comum</td><td data-label="Potência">~150 W</td><td data-label="Corrente">0,7 A</td><td class="highlight" data-label="Disjuntor">10 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Máq. de lavar 10 kg</td><td data-label="Potência">~500 W</td><td data-label="Corrente">2,3 A</td><td class="highlight" data-label="Disjuntor">16 A</td><td data-label="Fio">2,5 mm²</td></tr>
+          <tr><td data-label="Equipamento">Secadora de roupas</td><td data-label="Potência">~2.500 W</td><td data-label="Corrente">11,4 A</td><td class="highlight" data-label="Disjuntor">20 A</td><td data-label="Fio">4,0 mm²</td></tr>
+          <tr><td data-label="Equipamento">Aquecedor elétrico</td><td data-label="Potência">~2.000 W</td><td data-label="Corrente">9,1 A</td><td class="highlight" data-label="Disjuntor">20 A</td><td data-label="Fio">2,5 mm²</td></tr>
         </tbody>
       </table>
 
@@ -439,7 +479,7 @@
           <p>Compare preços e veja os mais vendidos no Mercado Livre. Entrega rápida para todo o Brasil.</p>
         </div>
         <!-- SUBSTITUA ESSE LINK PELO SEU LINK DE AFILIADO DO MERCADO LIVRE -->
-        <a href="https://www.mercadolivre.com.br/c/material-eletrico" target="_blank" rel="noopener" class="btn-affiliate">Ver materiais elétricos →</a>
+        <a href="ofertas.html" target="_blank" rel="noopener" class="btn-affiliate">Ver materiais elétricos →</a>
       </div>
     </div>
   </section>
@@ -461,15 +501,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Geladeira frost-free</td><td>150 W</td><td>24h (compressor varia)</td><td class="highlight">30–45 kWh</td><td>R$ 30–50</td></tr>
-          <tr><td>Ar-cond. 12.000 BTU</td><td>1.200 W</td><td>8h</td><td class="highlight">288 kWh</td><td>R$ 250–320</td></tr>
-          <tr><td>Chuveiro elétrico</td><td>5.500 W</td><td>20 min</td><td class="highlight">55 kWh</td><td>R$ 50–70</td></tr>
-          <tr><td>TV LED 50"</td><td>100 W</td><td>5h</td><td class="highlight">15 kWh</td><td>R$ 13–18</td></tr>
-          <tr><td>Computador desktop</td><td>300 W</td><td>6h</td><td class="highlight">54 kWh</td><td>R$ 47–65</td></tr>
-          <tr><td>Máq. lavar 10 kg</td><td>500 W</td><td>1h (12x/mês)</td><td class="highlight">6 kWh</td><td>R$ 5–8</td></tr>
-          <tr><td>Ferro de passar</td><td>1.000 W</td><td>30 min</td><td class="highlight">15 kWh</td><td>R$ 13–18</td></tr>
-          <tr><td>Micro-ondas</td><td>1.300 W</td><td>15 min</td><td class="highlight">9,75 kWh</td><td>R$ 8–12</td></tr>
-          <tr><td>Lâmpada LED 9W</td><td>9 W</td><td>6h</td><td class="highlight">1,62 kWh</td><td>R$ 1,50</td></tr>
+          <tr><td data-label="Aparelho">Geladeira frost-free</td><td data-label="Potência">150 W</td><td data-label="Uso/dia">24h (compressor varia)</td><td class="highlight" data-label="Consumo/mês">30–45 kWh</td><td data-label="Custo/mês">R$ 30–50</td></tr>
+          <tr><td data-label="Aparelho">Ar-cond. 12.000 BTU</td><td data-label="Potência">1.200 W</td><td data-label="Uso/dia">8h</td><td class="highlight" data-label="Consumo/mês">288 kWh</td><td data-label="Custo/mês">R$ 250–320</td></tr>
+          <tr><td data-label="Aparelho">Chuveiro elétrico</td><td data-label="Potência">5.500 W</td><td data-label="Uso/dia">20 min</td><td class="highlight" data-label="Consumo/mês">55 kWh</td><td data-label="Custo/mês">R$ 50–70</td></tr>
+          <tr><td data-label="Aparelho">TV LED 50"</td><td data-label="Potência">100 W</td><td data-label="Uso/dia">5h</td><td class="highlight" data-label="Consumo/mês">15 kWh</td><td data-label="Custo/mês">R$ 13–18</td></tr>
+          <tr><td data-label="Aparelho">Computador desktop</td><td data-label="Potência">300 W</td><td data-label="Uso/dia">6h</td><td class="highlight" data-label="Consumo/mês">54 kWh</td><td data-label="Custo/mês">R$ 47–65</td></tr>
+          <tr><td data-label="Aparelho">Máq. lavar 10 kg</td><td data-label="Potência">500 W</td><td data-label="Uso/dia">1h (12x/mês)</td><td class="highlight" data-label="Consumo/mês">6 kWh</td><td data-label="Custo/mês">R$ 5–8</td></tr>
+          <tr><td data-label="Aparelho">Ferro de passar</td><td data-label="Potência">1.000 W</td><td data-label="Uso/dia">30 min</td><td class="highlight" data-label="Consumo/mês">15 kWh</td><td data-label="Custo/mês">R$ 13–18</td></tr>
+          <tr><td data-label="Aparelho">Micro-ondas</td><td data-label="Potência">1.300 W</td><td data-label="Uso/dia">15 min</td><td class="highlight" data-label="Consumo/mês">9,75 kWh</td><td data-label="Custo/mês">R$ 8–12</td></tr>
+          <tr><td data-label="Aparelho">Lâmpada LED 9W</td><td data-label="Potência">9 W</td><td data-label="Uso/dia">6h</td><td class="highlight" data-label="Consumo/mês">1,62 kWh</td><td data-label="Custo/mês">R$ 1,50</td></tr>
         </tbody>
       </table>
       <p style="margin-top:16px; font-size:13px; color: var(--muted);">* Valores estimados com tarifa média de R$ 0,87/kWh (bandeira amarela, 2024). Consulte sua fatura para o valor exato.</p>
@@ -535,6 +575,9 @@
         <li><a href="privacidade.html">Privacidade</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
+      <div style="margin-top:20px">
+        <p style="font-size:12px;color:var(--muted)">📧 <a href="mailto:eletric.facil@gmail.com" style="color:var(--yellow)">eletric.facil@gmail.com</a></p>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
