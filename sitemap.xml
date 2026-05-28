@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://arthurharter.github.io/eletrica-facil/</loc>
+    <lastmod>2025-05-28</lastmod>
     <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
   </url>
-
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/bitola-de-fios.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/disjuntores.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/consumo-eletrico.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/chuveiro-eletrico.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/ar-condicionado.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/tomadas-padrao.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/sobre.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/contato.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://arthurharter.github.io/eletrica-facil/privacidade.html</loc>
+    <lastmod>2025-05-28</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
